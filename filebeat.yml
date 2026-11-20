@@ -1,0 +1,10 @@
+filebeat.inputs:
+  - type: filestream
+    id: application-logs
+    enabled: true
+    paths:
+      - /var/log/app/*.log
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
